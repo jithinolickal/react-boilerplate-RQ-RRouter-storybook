@@ -1,0 +1,39 @@
+.ant-btn-primary {
+  background-image: linear-gradient(
+    to right,
+    #1c1c1c 0%,
+    #434343 51%,
+    #1c1c1c 100%
+  );
+  /* margin: 10px; */
+  /* padding: 15px 45px; */
+  text-align: center;
+  /* text-transform: uppercase; */
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  /* border-radius: 10px; */
+  display: block;
+}
+
+.ant-btn-primary:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.ant-btn-default:not(:disabled):not(.ant-btn-disabled):hover,
+.ant-btn-dashed:not(:disabled):not(.ant-btn-disabled):hover {
+  color: #1c1c1c;
+  border-color: #1c1c1c;
+}
+
+.ant-btn-link:not(:disabled):not(.ant-btn-disabled):hover {
+  color: #1c1c1c;
+}
+
+.ant-btn-primary:disabled{
+    opacity: 0.9;
+    color: inherit;
+}

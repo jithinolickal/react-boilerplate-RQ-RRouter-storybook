@@ -1,0 +1,30 @@
+.ant-menu-item-group-list > .ant-menu-item-only-child::before {
+  background-color: #cccccc;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+}
+.ant-menu-item-group-list > .ant-menu-item-selected,
+.ant-menu-light .ant-menu-item-selected {
+  color: #1c1c1c;
+  background-color: #1c1c1c11;
+  /* border-radius: 10px; */
+}
+
+.ant-menu-light .ant-menu-submenu-selected > .ant-menu-submenu-title,
+.ant-menu-title-content {
+  color: #1c1c1c;
+}
+
+.ant-menu-light .ant-menu-item-selected::before {
+  background-color: #1c1c1c;
+  content: "";
+  width: 8px;
+  height: 24px;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+}
