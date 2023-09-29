@@ -1,17 +1,16 @@
 import { Menu } from "antd";
+// import type {MenuProps} from "antd"
 import {
   HomeOutlined,
   ReconciliationOutlined,
   MonitorOutlined,
   FundViewOutlined,
 } from "@ant-design/icons";
-import type { MenuProps } from 'antd';
+import type { MenuProps } from "antd";
 
 import "./SideNavBar.css";
 
-type Props = {};
-
-const items: MenuProps['items']  = [
+const items: MenuProps["items"] = [
   {
     label: "Favorites",
     key: "favorites",
@@ -57,9 +56,9 @@ const items: MenuProps['items']  = [
   },
 ];
 
-const SideNavBar = (props: Props) => {
+const SideNavBar = ({ defaultSelectedKeys, items, ...props }: MenuProps) => {
   return (
-    <div style={{ width: 256 }}>
+    <div>
       <Menu
         //   onClick={onClick}
         //   defaultSelectedKeys={['1']}
@@ -68,6 +67,8 @@ const SideNavBar = (props: Props) => {
         mode="inline"
         items={items}
         inlineCollapsed={false}
+        defaultSelectedKeys={defaultSelectedKeys}
+        {...props}
       />
     </div>
   );

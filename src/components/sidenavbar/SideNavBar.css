@@ -1,4 +1,4 @@
-.ant-menu-item-group-list > .ant-menu-item-only-child::before {
+/* .ant-menu-item-group-list > .ant-menu-item-only-child::before {
   background-color: #cccccc;
   content: "";
   width: 8px;
@@ -11,7 +11,6 @@
 .ant-menu-light .ant-menu-item-selected {
   color: #1c1c1c;
   background-color: #1c1c1c11;
-  /* border-radius: 10px; */
 }
 
 .ant-menu-light .ant-menu-submenu-selected > .ant-menu-submenu-title,
@@ -27,4 +26,4 @@
   border-radius: 5px;
   position: absolute;
   left: 0;
-}
+} */

@@ -1,5 +1,8 @@
-import React from "react";
 import { Table as AntdTable } from "antd";
+import type { TableProps } from "antd/es/table";
+
+import "./Table.css";
+import { RefTable } from "antd/es/table/interface";
 
 interface Row {
   key: string;
@@ -9,24 +12,8 @@ interface Row {
   // tags: string[];
 }
 
-type Props = {
-  dataSource: Array<Row>;
-  columns: Array<Record<string, unknown>>;
-};
-
-const Table = ({ dataSource, columns }: Props) => {
-  return (
-    <AntdTable
-      dataSource={dataSource}
-      columns={columns}
-      rowSelection={{ type: "checkbox" }}
-      size="large"
-      bordered={false}
-      loading={false}
-      scroll={{scrollToFirstRowOnChange: true}}
-      // sticky={true}
-    />
-  );
+const Table = ({ ...props }: TableProps<any>) => {
+  return <AntdTable {...props} />;
 };
 
 export default Table;

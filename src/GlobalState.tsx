@@ -1,13 +1,16 @@
 import { QueryClient } from "@tanstack/react-query";
 import { useQuery } from "@tanstack/react-query";
 
-import client from "src/utils/rqclient.ts"
+import client from "src/utils/rqclient.ts";
 
 const useRQSGlobalState = (key, initialData) => [
-  useQuery({queryKey: [key],queryFn:  () => initialData}, {
-    enabled: false, // Important - To prevent from clearing cache/data
-    initialData,
-  }).data,
+  useQuery(
+    { queryKey: [key], queryFn: () => initialData },
+    {
+      enabled: false, // Important - To prevent from clearing cache/data
+      initialData,
+    }
+  ).data,
   (value) => client.setQueryData([key], value),
 ];
 
